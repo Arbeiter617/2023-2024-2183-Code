@@ -8,12 +8,12 @@ import edu.wpi.first.networktables.NetworkTableEntry;
 import edu.wpi.first.networktables.NetworkTableInstance;
 
 
-public class limelightSuckADick extends Command {
+public class limelightValuesRead extends Command {
     public static double prev_distance = 0;
     public static double idRead;
     public static double xValue;
     public static double yValue;
-     public limelightSuckADick() {
+     public limelightValuesRead() {
         
      }
    

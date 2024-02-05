@@ -28,7 +28,7 @@ public class readAprilTags extends Command {
      
      @Override
      public void execute() {
-        specificID =  limelightSuckADick.idRead;
+        specificID =  limelightValuesRead.idRead;
 
         //check tags//
         if(toggleLiemlight.toggleLimelightPos) {

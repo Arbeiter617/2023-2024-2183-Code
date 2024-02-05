@@ -15,7 +15,7 @@ import frc.robot.commands.Shooter;
 import frc.robot.commands.autoCommands;
 import frc.robot.commands.camControl;
 import frc.robot.commands.colorSensorRun;
-import frc.robot.commands.limelightSuckADick;
+import frc.robot.commands.limelightValuesRead;
 import frc.robot.commands.pieceRetard;
 import frc.robot.commands.pistonControl;
 import frc.robot.subsystems.proximitySens;

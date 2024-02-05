@@ -28,7 +28,7 @@ public class RobotContainer {
   public static camControl CamControl = new camControl();
   public static wenchControl wenchControl = new wenchControl();
   public static pistonControl pistonControl = new pistonControl();
-  public static limelightSuckADick limelightSuckADick = new limelightSuckADick();
+  public static limelightValuesRead limelightSuckADick = new limelightValuesRead();
   public static colorSensorRun colorSensorRun = new colorSensorRun();
   public static readAprilTags readAprilTags = new readAprilTags();
   public static toggleLiemlight toggleLiemlight = new toggleLiemlight();
