@@ -106,6 +106,7 @@ public class Robot extends TimedRobot {
     autoChooser.addOption("F2M5", kFourPieceMiddle);
     autoChooser.addOption("F3M5", kFourPieceMiddleL);
     autoChooser.addOption("Test5Piece", kTestFivePiece);
+    autoChooser.addOption("F1M5M4", kFourPieceMiddleR);
     autoChooser.addOption("chaosAuto", kChaosAuto);
     SmartDashboard.putData("Auto Selected:", autoChooser);
     m_autoSelected = autoChooser.getSelected();

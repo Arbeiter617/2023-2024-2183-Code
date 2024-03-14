@@ -77,9 +77,9 @@ public class RobotContainer {
  String fourPieceMiddle = "F2M5";
  String fourPieceMiddleL = "F3M5";
  String kThreePieceMiddleR = "F1M3";
-String kFourPieceMiddleR = "F1M5M4";
-String kTest5Piece = "Test5Piece";
-String kChaosAuto = "chaosAuto";
+ String kFourPieceMiddleR = "F1M5M4";
+ String kTest5Piece = "Test5Piece";
+ String kChaosAuto = "chaosAuto";
 
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
@@ -153,9 +153,6 @@ String kChaosAuto = "chaosAuto";
         System.out.println("ERROR");
         return null;
       }
-    
-
-    
   }
 
 }
