@@ -51,8 +51,8 @@ public class Shooter extends Command {
       
        //can i fire?//
         if(fireToggle) {
-        Constants.shooterLeft.set(shooterSpeed);
-          Constants.shooterRight.set(-shooterSpeed);
+        Constants.shooterLeft.set(-shooterSpeed);
+          Constants.shooterRight.set(shooterSpeed);
        } else {
         Constants.shooterLeft.set(0);
         Constants.shooterRight.set(0);

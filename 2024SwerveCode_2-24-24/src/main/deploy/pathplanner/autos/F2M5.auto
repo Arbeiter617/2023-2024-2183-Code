@@ -50,12 +50,6 @@
                       }
                     },
                     {
-                      "type": "wait",
-                      "data": {
-                        "waitTime": 0
-                      }
-                    },
-                    {
                       "type": "path",
                       "data": {
                         "pathName": "4PieceMiddle1"

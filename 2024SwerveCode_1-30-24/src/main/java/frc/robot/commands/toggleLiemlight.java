@@ -9,7 +9,7 @@ public class toggleLiemlight extends Command {
     static Boolean toggleLimelight = false;
     Boolean toggle = true;
 
-    static Boolean toggleLimelightPos = false;
+    public static Boolean toggleLimelightPos = false;
     Boolean togglePos = true;
      public toggleLiemlight() {
         

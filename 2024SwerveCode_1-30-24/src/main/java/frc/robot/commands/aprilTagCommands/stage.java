@@ -5,7 +5,7 @@ import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.Constants;
 import frc.robot.RobotContainer;
 import frc.robot.commands.TeleopSwerve;
-import frc.robot.commands.limelightSuckADick;
+import frc.robot.commands.limelightValuesRead;
 import frc.robot.commands.wenchControl;
 
 public class stage extends Command {
@@ -29,12 +29,12 @@ public class stage extends Command {
      
      @Override
      public void execute() {
-        if(limelightSuckADick.yValue > (0 + 2) && wenchControl.wenchPID < 0) {
+        if(limelightValuesRead.yValue > (0 + 2) && wenchControl.wenchPID < 0) {
             Constants.wenchMotor.set(.25);
-            controlMovement();
-        } else if(limelightSuckADick.yValue < (0 - 2) && wenchControl.wenchPID > -118) {
+            //controlMovement();
+        } else if(limelightValuesRead.yValue < (0 - 2) && wenchControl.wenchPID > -118) {
             Constants.wenchMotor.set(-.25);
-            controlMovement();
+            //controlMovement();
         } else {
             Constants.wenchMotor.set(0);
         }

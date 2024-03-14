@@ -12,12 +12,14 @@ import edu.wpi.first.wpilibj2.command.Command;
 import edu.wpi.first.wpilibj2.command.CommandScheduler;
 import frc.lib.config.CTREConfigs;
 import frc.robot.commands.Shooter;
+import frc.robot.commands.TeleopSwerve;
 import frc.robot.commands.autoCommands;
 import frc.robot.commands.camControl;
 import frc.robot.commands.colorSensorRun;
 import frc.robot.commands.limelightValuesRead;
 import frc.robot.commands.pieceRetard;
 import frc.robot.commands.pistonControl;
+import frc.robot.commands.swerveAprilTagAlign;
 import frc.robot.subsystems.proximitySens;
 import edu.wpi.first.wpilibj.util.Color;
 
@@ -51,6 +53,9 @@ public class Robot extends TimedRobot {
   //encoders//
    public static RelativeEncoder intakeUpEncoder;
    public static RelativeEncoder wenchEncoder;
+
+   //boolean//
+   public static Boolean drivePls;
 
 
 
@@ -169,6 +174,7 @@ public class Robot extends TimedRobot {
     //SmartDashboard.putNumber("Intake Encoder Position", intakeUpEncoder.getPosition());
     SmartDashboard.putNumber("Wench Encoder Position", wenchEncoder.getPosition());
     SmartDashboard.putBoolean("Piece?", colorSensorRun.pieceIsFound);
+    //SmartDashboard.putBoolean("Spin", RobotContainer.drivepls);
     // SmartDashboard.putNumber("ServoAngle:", camControl.camAngle);
     // SmartDashboard.putNumber("Piston Angle:", Constants.actionPiston2.getAngle());
     //SmartDashboard.putNumber("previous distance:", limelightSuckADick.prev_distance);

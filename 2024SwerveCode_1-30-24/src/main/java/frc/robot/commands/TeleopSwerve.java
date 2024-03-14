@@ -5,6 +5,7 @@ import edu.wpi.first.math.filter.SlewRateLimiter;
 import edu.wpi.first.math.geometry.Translation2d;
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.Constants;
+import frc.robot.RobotContainer;
 import frc.robot.subsystems.Swerve;
 import java.util.function.BooleanSupplier;
 import java.util.function.DoubleSupplier;
@@ -42,15 +43,22 @@ public class TeleopSwerve extends Command {
   @Override
   public void execute() {
     /* Get Values, Deadband*/
-    translationVal =
+
+    if(RobotContainer.drivepls) {
+      translationVal = .25;
+      strafeVal = .25;
+      rotationVal = .25;
+    } else {
+      translationVal =
         translationLimiter.calculate(
             MathUtil.applyDeadband(translationSup.getAsDouble(), Constants.Swerve.stickDeadband));
-    strafeVal =
+      strafeVal =
         strafeLimiter.calculate(
             MathUtil.applyDeadband(strafeSup.getAsDouble(), Constants.Swerve.stickDeadband));
-    rotationVal =
+      rotationVal =
         rotationLimiter.calculate(
             MathUtil.applyDeadband(rotationSup.getAsDouble(), Constants.Swerve.stickDeadband));
+    }
 
     /* Drive */
     s_Swerve.drive(

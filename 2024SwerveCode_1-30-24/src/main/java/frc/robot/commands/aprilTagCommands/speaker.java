@@ -8,7 +8,7 @@ import frc.robot.Constants;
 import frc.robot.RobotContainer;
 import frc.robot.Constants.Swerve;
 import frc.robot.commands.TeleopSwerve;
-import frc.robot.commands.limelightSuckADick;
+import frc.robot.commands.limelightValuesRead;
 import frc.robot.commands.wenchControl;
 
 public class speaker extends Command {
@@ -16,7 +16,7 @@ public class speaker extends Command {
     private frc.robot.subsystems.Swerve s_Swerve = TeleopSwerve.s_Swerve;
 
     //specific values//
-    double translationSupLocal;
+    double translationSupLocal = 1;
     double rotationSupLocal;
     double strafeSupLocal;
     boolean robotCentricSupLocal = true;
@@ -30,23 +30,16 @@ public class speaker extends Command {
      
      @Override
      public void execute() {
-        if(limelightSuckADick.yValue > (0 + 2) && wenchControl.wenchPID < 0) {
+        if(limelightValuesRead.yValue > (0 + 2) && wenchControl.wenchPID < 0) {
             Constants.wenchMotor.set(.25);
-            controlMovement();
-        } else if(limelightSuckADick.yValue < (0 - 2) && wenchControl.wenchPID > -118) {
+            //controlMovement();
+        } else if(limelightValuesRead.yValue < (0 - 2) && wenchControl.wenchPID > -68) {
             Constants.wenchMotor.set(-.25);
-            controlMovement();
+            //controlMovement();
         } else {
             Constants.wenchMotor.set(0);
         }
     }
 
-    void controlMovement() {
-        s_Swerve.drive(
-        new Translation2d(translationSupLocal/2, strafeSupLocal/2).times(Constants.Swerve.maxSpeed),
-        rotationSupLocal * Constants.Swerve.maxAngularVelocity,
-        !robotCentricSupLocal,
-        true);
-  }
 }
 

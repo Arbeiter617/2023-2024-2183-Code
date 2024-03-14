@@ -56,18 +56,25 @@ public class RobotContainer {
   /* Subsystems */
   private final Swerve s_Swerve = new Swerve();
 
+  private int translationAxis2 = 1;
+  private int strafeAxis2 = 2;
+  private int rotationAxis2 = 3;
+
+  public static Boolean drivepls = false;
+
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
-    s_Swerve.setDefaultCommand(
+      s_Swerve.setDefaultCommand(
         new TeleopSwerve(
             s_Swerve,
             () -> -driver.getRawAxis(translationAxis),
             () -> -driver.getRawAxis(strafeAxis),
             () -> -driver.getRawAxis(rotationAxis),
             () -> robotCentric.getAsBoolean()));
-
     // Configure the button bindings
     configureButtonBindings();
+
+
   }
 
   /**

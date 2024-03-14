@@ -27,7 +27,7 @@ public class wenchControl extends Command {
         if(povNumbers == 0 && wenchPID < 0) {
             //wench up//
             Constants.wenchMotor.set(1);
-        } else if(povNumbers == 180 && wenchPID > -118) {
+        } else if(povNumbers == 180 && wenchPID > -68) {
             //wench down//
             Constants.wenchMotor.set(-1);
         } else {
